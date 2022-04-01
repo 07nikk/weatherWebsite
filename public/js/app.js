@@ -18,13 +18,10 @@ weatherForm.addEventListener('submit',(e)=>{
                     msg2.textContent=`${data.error}`
         
                 }else{
-                    // console.log(data.forecast);
                     msg1.textContent=`${data.location}`;
                     msg2.textContent=`${data.forecast}`;
                 }
             })
         })
 });
-
-// msg1.textContent = 'From JS';
 
