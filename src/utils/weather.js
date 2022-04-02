@@ -11,9 +11,8 @@ const forecast=(long,lat,callback)=>{
         {
             callback('Unable to fetch the location weather forecast kindly try another location',undefined);
         } else{
-            const {temperature,precip,feelslike,weather_descriptions} = body.current ;
-            
-            const message = `${weather_descriptions[0]} It is currently ${temperature} degrees out. There is ${precip} chance of rain and feels like ${feelslike} degrees`;
+            const {temperature,precip,feelslike,weather_descriptions,visibility} = body.current ;
+            const message = `${weather_descriptions[0]} It is currently ${temperature} degrees out. There is ${precip} chance of rain and feels like ${feelslike} degrees and visibility is ${visibility} meters`;
             callback(undefined,message);
         }
     })
